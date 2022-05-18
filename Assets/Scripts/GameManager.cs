@@ -8,11 +8,16 @@ public class GameManager : MonoBehaviour
 
     public BoardManager boardManager;
 
+    /// <summary>
+    /// 总步数
+    /// </summary>
+    public int playerFootPoints = 100;
+
     private int _level = 0;
 
     private void Awake()
     {
-        if ( instance == null )
+        if( instance == null )
         {
             instance = this;
         }
@@ -30,6 +35,11 @@ public class GameManager : MonoBehaviour
 
     private void InitGame()
     {
-        boardManager.SetUpScene( _level );
+        boardManager.SetupScene( _level );
+    }
+
+    public void GameOver()
+    {
+        enabled = false;
     }
 }

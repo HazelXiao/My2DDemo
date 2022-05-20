@@ -22,7 +22,7 @@ public class PlayerStateMachine : MonoBehaviour, IStateMachineOwner
 	private void Start()
 	{
 		_stateMachine = new StateMachine();
-		_stateMachine.Init( this );
+		_stateMachine.Initialize( this );
 		_stateMachine.ChangeState<PlayerState_Idle>( State.Idle );
 
 	}

@@ -33,10 +33,18 @@ public class StateMachine
 	/// ³õÊ¼»¯
 	/// </summary>
 	/// <param name="owner"></param>
-	public void Init( IStateMachineOwner owner )
+	public void Initialize( IStateMachineOwner owner )
 	{
 		this._owner = owner;
 	}
+
+	/// <summary>
+	/// ×¢²á×´Ì¬
+	/// </summary>
+	/// <param name="State"></param>
+	/// <param name="stateBase"></param>
+	public void ReginState( State State, StateBase stateBase ) { }
+
 
 	/// <summary>
 	/// ÇÐ»»×´Ì¬

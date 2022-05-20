@@ -27,7 +27,7 @@ public class StateMachine
 	/// <summary>
 	/// 所有的状态字典
 	/// </summary>
-	private Dictionary<State, StateBase> _stateDictionary = new Dictionary<State, StateBase>();
+	private Dictionary<State, StateBase> _states = new Dictionary<State, StateBase>();
 
 	/// <summary>
 	/// 初始化
@@ -43,12 +43,12 @@ public class StateMachine
 	/// </summary>
 	/// <typeparam name="T">具体要切换的状态对象类型</typeparam>
 	/// <param name="newState">新状态</param>
-	/// <param name="reCurrentState">刷新当前状态</param>
+	/// <param name="refreshCurrentState">刷新当前状态</param>
 	/// <returns></returns>
-	public bool ChangeState<T>( State newStateType, bool reCurrentState = false ) where T : StateBase, new()
+	public bool ChangeState<T>( State newStateType, bool refreshCurrentState = false ) where T : StateBase, new()
 	{
 		// 状态一致，不刷新，不切换
-		if( newStateType == CurrentStateType && !reCurrentState )
+		if( newStateType == CurrentStateType && !refreshCurrentState )
 		{
 			return false;
 		}
@@ -72,7 +72,7 @@ public class StateMachine
 	private StateBase GetState<T>( State stateType ) where T : StateBase, new()
 	{
 		// 检查缓存里面有没有这个状态，有直接从缓存取
-		if( _stateDictionary.TryGetValue( stateType, out StateBase stateObject ) )
+		if( _states.TryGetValue( stateType, out StateBase stateObject ) )
 		{
 			return stateObject;
 		}
@@ -80,14 +80,14 @@ public class StateMachine
 		// 如果没有 new 一个，添加到缓存中
 		StateBase state = new T();
 		state.Init( _owner, this );
-		_stateDictionary.Add( stateType, state );
+		_states.Add( stateType, state );
 
 		return state;
 	}
 
 	public void Update()
 	{
-		if(_currentStateObject != null )
+		if( _currentStateObject != null )
 		{
 			_currentStateObject.Update();
 		}
@@ -98,7 +98,7 @@ public class StateMachine
 	/// </summary>
 	public void Stop()
 	{
-		if(_currentStateObject != null )
+		if( _currentStateObject != null )
 		{
 			_currentStateObject.Exit();
 		}
@@ -106,6 +106,6 @@ public class StateMachine
 		_currentStateObject = null;
 		CurrentStateType = State.Default;
 
-		_stateDictionary.Clear();
+		_states.Clear();
 	}
 }

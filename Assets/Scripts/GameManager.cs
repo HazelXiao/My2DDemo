@@ -4,42 +4,48 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager instance = null;
+	public static GameManager instance = null;
 
-    public BoardManager boardManager;
+	public BoardManager boardManager;
 
-    /// <summary>
-    /// 总步数
-    /// </summary>
-    public int playerFootPoints = 100;
+	/// <summary>
+	/// 总步数
+	/// </summary>
+	public int playerFoodPoints = 100;
 
-    private int _level = 0;
+	/// <summary>
+	/// 玩家回合（ false 敌人行动 ）
+	/// </summary>
+	[HideInInspector]
+	public bool playersTurn = true;
 
-    private void Awake()
-    {
-        if( instance == null )
-        {
-            instance = this;
-        }
-        else if( instance != this )
-        {
-            Destroy(gameObject);
-        }
-        
-        DontDestroyOnLoad(gameObject);
-        
-        boardManager = GetComponent<BoardManager>();
-        
-        InitGame();
-    }
+	private int _level = 0;
 
-    private void InitGame()
-    {
-        boardManager.SetupScene( _level );
-    }
+	private void Awake()
+	{
+		if( instance == null )
+		{
+			instance = this;
+		}
+		else if( instance != this )
+		{
+			Destroy( gameObject );
+		}
 
-    public void GameOver()
-    {
-        enabled = false;
-    }
+		DontDestroyOnLoad( gameObject );
+
+		boardManager = GetComponent<BoardManager>();
+
+		InitGame();
+	}
+
+	private void InitGame()
+	{
+		boardManager.SetupScene( _level );
+	}
+
+	public void GameOver()
+	{
+		enabled = false;
+	}
 }

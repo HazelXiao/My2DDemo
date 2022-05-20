@@ -12,8 +12,10 @@ public class PlayerStateBase : StateBase
 	{
 		base.Init( owner, stateMachine );
 
-		animator = ( owner as PlayerStateMachine ).animator;
+		var playerStateMachine = owner as PlayerStateMachine;
 
-		playerController = ( owner as PlayerStateMachine ).controller;
+		animator = playerStateMachine.animator;
+
+		playerController = playerStateMachine.controller;
 	}
 }

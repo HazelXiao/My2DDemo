@@ -6,14 +6,9 @@ using UnityEngine.Serialization;
 public abstract class CharacterMove : MonoBehaviour
 {
 	/// <summary>
-	/// 移动时间
-	/// </summary>
-	public float moveTime = 1f;
-
-	/// <summary>
 	/// 移动速度
 	/// </summary>
-	public float moveSpeed = 0.1f;
+	public float moveSpeed = 1f;
 
 	/// <summary>
 	/// 内外墙体等可碰撞的物体层
@@ -24,14 +19,10 @@ public abstract class CharacterMove : MonoBehaviour
 
 	private Rigidbody2D _rigidbody2D;
 
-	private float _inverseMoveTime;
-
 	protected virtual void Start()
 	{
 		boxCollider2D = GetComponent<BoxCollider2D>();
 		_rigidbody2D = GetComponent<Rigidbody2D>();
-
-		_inverseMoveTime = moveTime / moveSpeed;
 	}
 
 	/// <summary>
@@ -41,7 +32,7 @@ public abstract class CharacterMove : MonoBehaviour
 	/// <returns></returns>
 	protected IEnumerator OnMove( Vector3 endPositon )
 	{
-		Vector3 newPosition = Vector3.MoveTowards( _rigidbody2D.position, endPositon, _inverseMoveTime * Time.deltaTime );
+		Vector3 newPosition = Vector3.MoveTowards( _rigidbody2D.position, endPositon, moveSpeed );
 		_rigidbody2D.MovePosition( newPosition );
 
 		yield return null;

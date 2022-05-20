@@ -19,7 +19,6 @@ public class PlayerStateMachine : MonoBehaviour, IStateMachineOwner
 
 	private StateMachine _stateMachine;
 
-
 	private void Start()
 	{
 		_stateMachine = new StateMachine();

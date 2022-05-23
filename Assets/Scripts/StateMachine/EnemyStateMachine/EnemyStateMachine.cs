@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerStateMachine : MonoBehaviour, IStateMachineOwner
+public class EnemyStateMachine : MonoBehaviour, IStateMachineOwner
 {
 	public Animator animator;
 
-	public PlayerController controller;
+	public EnemyController controller;
 
 	private StateMachine _stateMachine;
 
@@ -14,7 +14,7 @@ public class PlayerStateMachine : MonoBehaviour, IStateMachineOwner
 	{
 		_stateMachine = new StateMachine();
 		_stateMachine.Initialize( this );
-		_stateMachine.ChangeState<PlayerState_Idle>( State.Idle );
+		_stateMachine.ChangeState<EnemyState_Idle>( State.Idle );
 
 	}
 

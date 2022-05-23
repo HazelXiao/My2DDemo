@@ -32,6 +32,8 @@ public abstract class CharacterMove : MonoBehaviour
 	/// <returns></returns>
 	protected IEnumerator OnMove( Vector3 endPositon )
 	{
+		Debug.Log( "_rigidbody2D.position" + _rigidbody2D.position );
+		Debug.Log( "endPositon" + endPositon );
 		Vector3 newPosition = Vector3.MoveTowards( _rigidbody2D.position, endPositon, moveSpeed );
 		_rigidbody2D.MovePosition( newPosition );
 

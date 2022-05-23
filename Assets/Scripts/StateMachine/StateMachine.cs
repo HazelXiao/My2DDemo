@@ -87,7 +87,7 @@ public class StateMachine
 
 		// 如果没有 new 一个，添加到缓存中
 		StateBase state = new T();
-		state.Init( _owner, this );
+		state.Initialize( _owner, this );
 		_states.Add( stateType, state );
 
 		return state;

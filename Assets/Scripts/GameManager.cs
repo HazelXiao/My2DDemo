@@ -21,6 +21,8 @@ public class GameManager : MonoBehaviour
 
 	private int _level = 0;
 
+	public List<EnemyController> enemys = new List<EnemyController>();
+
 	private void Awake()
 	{
 		if( instance == null )
@@ -39,8 +41,14 @@ public class GameManager : MonoBehaviour
 		InitGame();
 	}
 
+	public void AddEnemyToList( EnemyController script )
+	{
+		enemys.Add( script );
+	}
+
 	private void InitGame()
 	{
+		enemys.Clear();
 		boardManager.SetupScene( _level );
 	}
 

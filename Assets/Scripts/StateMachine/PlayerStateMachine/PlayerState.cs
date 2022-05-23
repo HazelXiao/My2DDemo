@@ -15,11 +15,13 @@ public class PlayerState_Idle : PlayerStateBase
 	{
 		base.Update();
 
-		if( Input.GetKeyDown( KeyCode.W ) || Input.GetKeyDown( KeyCode.S ) || Input.GetKeyDown( KeyCode.A ) || Input.GetKeyDown( KeyCode.D ) )
+		if( GameManager.instance.playersTurn )
 		{
-			stateMachine.ChangeState<PlayerState_Move>( State.Move, true );
+			if( Input.GetKeyDown( KeyCode.W ) || Input.GetKeyDown( KeyCode.S ) || Input.GetKeyDown( KeyCode.A ) || Input.GetKeyDown( KeyCode.D ) )
+			{
+				stateMachine.ChangeState<PlayerState_Move>( State.Move, true );
+			}
 		}
-
 	}
 }
 
@@ -37,33 +39,12 @@ public class PlayerState_Move : PlayerStateBase
 	{
 		base.Update();
 
-		playerController.Move();
-
-	}
-}
-
-public class PlayerState_Chop : PlayerStateBase
-{
-	public override void Enter()
-	{
-		base.Enter();
+		stateMachine.ChangeState<PlayerState_Idle>( State.Idle );
 	}
 
-	public override void Update()
+	public override void Exit()
 	{
-		base.Update();
-	}
-}
-
-public class PlayerState_Hit : PlayerStateBase
-{
-	public override void Enter()
-	{
-		base.Enter();
-	}
-
-	public override void Update()
-	{
-		base.Update();
+		base.Exit();
+		GameManager.instance.playersTurn = false;
 	}
 }

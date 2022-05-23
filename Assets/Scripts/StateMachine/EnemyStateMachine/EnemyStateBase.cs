@@ -2,20 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerStateBase : StateBase
+public class EnemyStateBase : StateBase
 {
 	protected Animator animator;
 
-	protected PlayerController playerController;
+	protected EnemyController enemyController;
 
 	public override void Initialize( IStateMachineOwner owner, StateMachine stateMachine )
 	{
 		base.Initialize( owner, stateMachine );
 
-		var playerStateMachine = owner as PlayerStateMachine;
+		var enemyStateMachine = owner as EnemyStateMachine;
 
-		animator = playerStateMachine.animator;
+		animator = enemyStateMachine.animator;
 
-		playerController = playerStateMachine.controller;
+		enemyController = enemyStateMachine.controller;
 	}
 }

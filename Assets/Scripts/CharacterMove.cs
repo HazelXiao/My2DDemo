@@ -19,10 +19,16 @@ public abstract class CharacterMove : MonoBehaviour
 
 	private Rigidbody2D _rigidbody2D;
 
+	[HideInInspector]
+	public Vector2Int currentGrid;
+
 	protected virtual void Start()
 	{
 		boxCollider2D = GetComponent<BoxCollider2D>();
 		_rigidbody2D = GetComponent<Rigidbody2D>();
+
+		var position = _rigidbody2D.position;
+		currentGrid = new Vector2Int( ( int )position.x, ( int )position.y );
 	}
 
 	/// <summary>
@@ -32,9 +38,9 @@ public abstract class CharacterMove : MonoBehaviour
 	/// <returns></returns>
 	protected IEnumerator OnMove( Vector3 endPositon )
 	{
-		Debug.Log( "_rigidbody2D.position" + _rigidbody2D.position );
-		Debug.Log( "endPositon" + endPositon );
 		Vector3 newPosition = Vector3.MoveTowards( _rigidbody2D.position, endPositon, moveSpeed );
+		currentGrid = new Vector2Int( ( int )newPosition.x, ( int )newPosition.y );
+
 		_rigidbody2D.MovePosition( newPosition );
 
 		yield return null;

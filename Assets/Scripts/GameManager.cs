@@ -19,9 +19,11 @@ public class GameManager : MonoBehaviour
 	[HideInInspector]
 	public bool playersTurn = true;
 
+	public float moveDelay = 0.3f;
+
 	private int _level = 0;
 
-	public List<EnemyController> enemys = new List<EnemyController>();
+	public List<EnemyController> enemies = new List<EnemyController>();
 
 	private void Awake()
 	{
@@ -38,17 +40,17 @@ public class GameManager : MonoBehaviour
 
 		boardManager = GetComponent<BoardManager>();
 
-		InitGame();
+		InitializeGame();
 	}
 
-	public void AddEnemyToList( EnemyController script )
+	public void AddEnemy( EnemyController enemy )
 	{
-		enemys.Add( script );
+		enemies.Add( enemy );
 	}
 
-	private void InitGame()
+	private void InitializeGame()
 	{
-		enemys.Clear();
+		enemies.Clear();
 		boardManager.SetupScene( _level );
 	}
 

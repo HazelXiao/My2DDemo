@@ -36,10 +36,9 @@ public class PlayerController : CharacterMove
 
 		base.TryMove<T>( x, y );
 
-		RaycastHit2D hit2D;
-
 		CheckIfGameOver();
 		GameManager.instance.playersTurn = false;
+		Debug.Log("Player_currentGrid : " + currentGrid);
 	}
 
 	protected override void OnCantMove<T>( T component )
@@ -63,17 +62,19 @@ public class PlayerController : CharacterMove
 	{
 		var go = collision.gameObject;
 
-		if( collision.tag == "Exit" )
+		TriggerObjectType currentType = collision.GetComponent<ObjectType>().type;
+
+		if( currentType == TriggerObjectType.Exit )
 		{
 			Invoke( "Restart", restartLevelDelay );
 			enabled = false;
 		}
-		else if( collision.tag == "Food" )
+		else if( currentType == TriggerObjectType.Food )
 		{
 			_points += foodPoints;
 			go.SetActive( false );
 		}
-		else if( collision.tag == "Soda" )
+		else if( currentType == TriggerObjectType.Soda )
 		{
 			_points += sodaPoints;
 			go.SetActive( false );

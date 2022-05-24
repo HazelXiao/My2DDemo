@@ -7,8 +7,6 @@ public class PlayerState_Idle : PlayerStateBase
 	public override void Enter()
 	{
 		base.Enter();
-
-		Debug.Log( "Idle" );
 	}
 
 	public override void Update()
@@ -27,19 +25,18 @@ public class PlayerState_Idle : PlayerStateBase
 
 public class PlayerState_Move : PlayerStateBase
 {
+
 	public override void Enter()
 	{
 		base.Enter();
 
-		Debug.Log( "move" );
 		playerController.Move();
 	}
 
 	public override void Update()
 	{
 		base.Update();
-
-		stateMachine.ChangeState<PlayerState_Idle>( State.Idle );
+			stateMachine.ChangeState<PlayerState_Idle>( State.Idle );
 	}
 
 	public override void Exit()

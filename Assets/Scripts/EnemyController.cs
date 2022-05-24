@@ -10,13 +10,16 @@ public class EnemyController : CharacterMove
 
 	private Transform _target;
 
+	private PlayerController _player;
+
 
 	protected override void Start()
 	{
-		GameManager.instance.AddEnemyToList( this );
+		GameManager.instance.AddEnemy( this );
 
 		_animator = GetComponent<Animator>();
 		_target = GameObject.FindGameObjectWithTag( "Player" ).transform;
+		_player = _target.GetComponent<PlayerController>();
 
 		base.Start();
 	}
@@ -24,18 +27,21 @@ public class EnemyController : CharacterMove
 	protected override void TryMove<T>( int x, int y )
 	{
 		base.TryMove<T>( x, y );
+
+		Debug.Log( "Enemy_currentGrid : " + currentGrid );
 	}
 
 	public void MoveEnemy()
 	{
 		int x = 0;
 		int y = 0;
+		var playerGrid = _player.currentGrid;
 
 		// 玩家和敌人之间 x 坐标的距离，是否在同一行
-		if( Mathf.Abs( _target.position.x - transform.position.x ) <= 0 )
+		if( playerGrid.x == currentGrid.x )
 		{
 			// y 坐标该向上移动还是向下移动
-			if( _target.position.y > transform.position.y )
+			if( playerGrid.y > currentGrid.y )
 			{
 				y = 1;
 			}
@@ -46,7 +52,7 @@ public class EnemyController : CharacterMove
 		}
 		else
 		{
-			if( _target.position.x > transform.position.y )
+			if( playerGrid.x > currentGrid.x )
 			{
 				x = 1;
 			}

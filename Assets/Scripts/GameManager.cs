@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour
 
 	public float leveStartDelay = 2f;
 
-	private int _level = 1;
+	private int _level = 0;
 
 	public List<EnemyController> enemies = new List<EnemyController>();
 
@@ -48,6 +48,8 @@ public class GameManager : MonoBehaviour
 			Destroy( gameObject );
 		}
 
+		SceneManager.sceneLoaded += OnSceneLoad;
+
 		DontDestroyOnLoad( gameObject );
 
 		boardManager = GetComponent<BoardManager>();
@@ -55,7 +57,7 @@ public class GameManager : MonoBehaviour
 		InitializeGame();
 	}
 
-	public void OnSceneLoad( Scene scene,LoadSceneMode mode )
+	private void OnSceneLoad( Scene scene,LoadSceneMode mode )
 	{
 		_level++;
 
@@ -117,5 +119,6 @@ public class GameManager : MonoBehaviour
 	}
 	private void OnDestroy()
 	{
+		SceneManager.sceneLoaded -= OnSceneLoad;
 	}
 }

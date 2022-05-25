@@ -13,7 +13,7 @@ public class EnemyState_Idle : EnemyStateBase
 	public override void Update()
 	{
 		base.Update();
-		if( !GameManager.instance.playersTurn )
+		if( !GameManager.instance.playersTurn && !GameManager.instance.isSetup)
 		{
 			_time += Time.deltaTime;
 			if( _time > GameManager.instance.moveDelay )
@@ -32,11 +32,6 @@ public class EnemyState_Move : EnemyStateBase
 	public override void Enter()
 	{
 		base.Enter();
-
-		foreach( var item in GameManager.instance.enemies )
-		{
-			item.MoveEnemy();
-		}
 	}
 
 	public override void Update()
@@ -45,8 +40,12 @@ public class EnemyState_Move : EnemyStateBase
 		_time += Time.deltaTime;
 		if( _time > GameManager.instance.moveDelay )
 		{
-			stateMachine.ChangeState<EnemyState_Idle>( State.Idle );
 			_time = 0;
+			foreach( var item in GameManager.instance.enemies )
+			{
+				item.MoveEnemy();
+			}
+			stateMachine.ChangeState<EnemyState_Idle>( State.Idle );
 		}
 	}
 	public override void Exit()

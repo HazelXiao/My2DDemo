@@ -18,7 +18,7 @@ public class EnemyController : CharacterMove
 		GameManager.instance.AddEnemy( this );
 
 		_animator = GetComponent<Animator>();
-		_target = GameObject.FindGameObjectWithTag( "Player" ).transform;
+		_target = GameObject.Find( Labels.Player ).transform;
 		_player = _target.GetComponent<PlayerController>();
 
 		base.Start();
@@ -27,8 +27,6 @@ public class EnemyController : CharacterMove
 	protected override void TryMove<T>( int x, int y )
 	{
 		base.TryMove<T>( x, y );
-
-		Debug.Log( "Enemy_currentGrid : " + currentGrid );
 	}
 
 	public void MoveEnemy()
@@ -69,7 +67,7 @@ public class EnemyController : CharacterMove
 	{
 		PlayerController player = component as PlayerController;
 
-		_animator.SetTrigger( "enemyAttack" );
+		_animator.SetTrigger( Labels.Trigger_EnemyAttack );
 
 		player.LoseFood( playerDamage );
 	}

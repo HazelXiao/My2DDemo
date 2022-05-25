@@ -88,7 +88,7 @@ public class BoardManager : MonoBehaviour
 	/// </summary>
 	private void SetupBoard()
 	{
-		_board = new GameObject( "Board" ).transform;
+		_board = new GameObject( Labels.Board ).transform;
 
 		// 外墙（比地板多出一块），上下左右 + 1
 		for( int i = -1; i < columns + 1; i++ )
@@ -143,7 +143,7 @@ public class BoardManager : MonoBehaviour
 		InstantiateObjectAtRandom( innerWallTiles, wallCountRange.minimum, wallCountRange.maximun );
 		InstantiateObjectAtRandom( foodTiles, foodCountRange.minimum, foodCountRange.maximun );
 
-		int enemyCount = level + 1;
+		int enemyCount = level ;
 		InstantiateObjectAtRandom( enemyTiles, enemyCount, enemyCount );
 
 		Vector3 exitPosition = new Vector3( columns - 1, rows - 1, 0f );

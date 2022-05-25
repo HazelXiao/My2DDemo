@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PlayerController : CharacterMove
 {
@@ -21,11 +22,15 @@ public class PlayerController : CharacterMove
 	/// </summary>
 	private int _points;
 
+	public Text foodText;
+
 	protected override void Start()
 	{
 		_animator = GetComponent<Animator>();
 
 		_points = GameManager.instance.playerFoodPoints;
+
+		foodText.text = Labels.Food + _points;
 
 		base.Start();
 	}
@@ -33,12 +38,12 @@ public class PlayerController : CharacterMove
 	protected override void TryMove<T>( int x, int y )
 	{
 		_points--;
+		foodText.text = Labels.Food + _points;
 
 		base.TryMove<T>( x, y );
 
 		CheckIfGameOver();
 		GameManager.instance.playersTurn = false;
-		Debug.Log("Player_currentGrid : " + currentGrid);
 	}
 
 	protected override void OnCantMove<T>( T component )
@@ -47,13 +52,22 @@ public class PlayerController : CharacterMove
 
 		hitWall.DamageWall( wallDamage );
 
-		_animator.SetTrigger( "playerChop" );
+		_animator.SetTrigger( Labels.Trigger_PlayerChop );
 	}
 
 	public void LoseFood( int losePoint )
 	{
-		_animator.SetTrigger( "playerHit" );
-		_points -= losePoint;
+		_animator.SetTrigger( Labels.Trigger_PlayerHit );
+		if( losePoint < _points )
+		{
+			_points -= losePoint;
+		}
+		else
+		{
+			_points = 0;
+		}
+
+		foodText.text = "-" + losePoint + Labels.Food + _points;
 
 		CheckIfGameOver();
 	}
@@ -66,17 +80,19 @@ public class PlayerController : CharacterMove
 
 		if( currentType == TriggerObjectType.Exit )
 		{
-			Invoke( "Restart", restartLevelDelay );
+			Invoke( Labels.Restart, restartLevelDelay );
 			enabled = false;
 		}
 		else if( currentType == TriggerObjectType.Food )
 		{
 			_points += foodPoints;
+			foodText.text = "+" + foodPoints + Labels.Food + _points;
 			go.SetActive( false );
 		}
 		else if( currentType == TriggerObjectType.Soda )
 		{
 			_points += sodaPoints;
+			foodText.text = "+" + sodaPoints + Labels.Food + _points;
 			go.SetActive( false );
 		}
 	}
@@ -129,6 +145,6 @@ public class PlayerController : CharacterMove
 
 	public void Restart()
 	{
-		SceneManager.LoadScene( "Main" );
+		SceneManager.LoadScene( Labels.MainScene );
 	}
 }

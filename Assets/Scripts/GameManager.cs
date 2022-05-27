@@ -25,7 +25,9 @@ public class GameManager : MonoBehaviour
 
 	public float leveStartDelay = 2f;
 
-	private int _level = 0;
+	public float nextLevelDelay = 1f;
+
+	private int _level = 1;
 
 	public List<EnemyController> enemies = new List<EnemyController>();
 
@@ -33,9 +35,25 @@ public class GameManager : MonoBehaviour
 
 	private GameObject _levelImage;
 
+	private GameObject _mainPanel;
+
+	private Button _startButton;
+
+	private Button _exitButton;
+
 	private Button _restartButton;
 
 	public bool isSetup;
+
+	public bool isShowMainPanel = true;
+
+	public bool isShowLevelImage = true;
+
+	public bool gameStart = false;
+
+	public bool isExit = false;
+
+	private float _time = 0;
 
 	private void Awake()
 	{
@@ -48,8 +66,6 @@ public class GameManager : MonoBehaviour
 			Destroy( gameObject );
 		}
 
-		SceneManager.sceneLoaded += OnSceneLoad;
-
 		DontDestroyOnLoad( gameObject );
 
 		boardManager = GetComponent<BoardManager>();
@@ -57,14 +73,20 @@ public class GameManager : MonoBehaviour
 		InitializeGame();
 	}
 
-	private void OnSceneLoad( Scene scene,LoadSceneMode mode )
+	public void GoToNextLevel()
 	{
-		_level++;
+		SceneManager.sceneLoaded += OnSceneLoad;
+		SceneManager.LoadScene( Labels.MainScene );
+	}
 
+	private void OnSceneLoad( Scene scene, LoadSceneMode mode )
+	{
+		SceneManager.sceneLoaded -= OnSceneLoad;
+
+		_level++;
 		InitializeGame();
 
 	}
-
 	public void AddEnemy( EnemyController enemy )
 	{
 		enemies.Add( enemy );
@@ -73,26 +95,62 @@ public class GameManager : MonoBehaviour
 	private void InitializeGame()
 	{
 		isSetup = true;
+		isShowLevelImage = true;
+		gameStart = false;
 
 		_levelImage = GameObject.Find( Labels.LevelImage );
+		_mainPanel = GameObject.Find( Labels.MainPanel );
 		_levelText = GameObject.Find( Labels.LevelText ).GetComponent<Text>();
 		_restartButton = GameObject.Find( Labels.RestartButton ).GetComponent<Button>();
+		_startButton = GameObject.Find( Labels.StartButton ).GetComponent<Button>();
+		_exitButton = GameObject.Find( Labels.ExitButton ).GetComponent<Button>();
 
-		_levelText.text = Labels.Day + _level;
-		_levelImage.SetActive( true );
-		_restartButton.onClick.AddListener( RestartGame );
-		//_restartButton.gameObject.SetActive( false );
-
-		Invoke( Labels.HideLevelImage, leveStartDelay );
+		ShowMainPanle();
+		ShowLevelImage();
 
 		enemies.Clear();
 		boardManager.SetupScene( _level );
+	}
+
+	private void ExitButtonOnClick()
+	{
+		Application.Quit();
+	}
+
+	private void StartButtonOnClick()
+	{
+		_mainPanel.SetActive( false );
+		isShowMainPanel = false;
+	}
+
+	private void ShowMainPanle()
+	{
+		if( isShowMainPanel )
+		{
+			_mainPanel.SetActive( true );
+
+			_startButton.onClick.AddListener( StartButtonOnClick );
+			_exitButton.onClick.AddListener( ExitButtonOnClick );
+		}
+		else
+		{
+			_mainPanel.SetActive( false );
+		}
+	}
+
+	private void ShowLevelImage()
+	{
+		_levelText.text = Labels.Day + _level;
+		_levelImage.SetActive( true );
+		_restartButton.gameObject.SetActive( false );
+		_restartButton.onClick.AddListener( RestartGame );
 	}
 
 	private void HideLevelImage()
 	{
 		_levelImage.SetActive( false );
 		isSetup = false;
+		gameStart = true;
 	}
 
 	public void GameOver()
@@ -105,20 +163,43 @@ public class GameManager : MonoBehaviour
 		{
 			_levelText.text = Labels.GameOverText_1 + _level + Labels.GameOverText_2;
 		}
-		_levelImage.SetActive ( true );
-		_restartButton.gameObject.SetActive ( true );
+		_levelImage.SetActive( true );
+		_restartButton.gameObject.SetActive( true );
 
+		gameStart = false;
 		enabled = false;
 
 
 	}
 
+	public void Update()
+	{
+		if( !isShowMainPanel && isShowLevelImage )
+		{
+			_time += Time.deltaTime;
+			if( _time >= leveStartDelay )
+			{
+				HideLevelImage();
+				_time = 0;
+				isShowLevelImage = false;
+			}
+		}
+
+		if( isExit )
+		{
+			_time += Time.deltaTime;
+			if( _time >= nextLevelDelay )
+			{
+				GoToNextLevel();
+				_time = 0;
+				isExit = false;
+			}
+		}
+	}
+
 	public void RestartGame()
 	{
-
-	}
-	private void OnDestroy()
-	{
-		SceneManager.sceneLoaded -= OnSceneLoad;
+		Destroy( gameObject );
+		SceneManager.LoadScene( Labels.MainScene );
 	}
 }

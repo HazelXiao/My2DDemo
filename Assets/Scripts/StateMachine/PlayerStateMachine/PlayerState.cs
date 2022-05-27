@@ -13,7 +13,7 @@ public class PlayerState_Idle : PlayerStateBase
 	{
 		base.Update();
 
-		if( GameManager.instance.playersTurn )
+		if( GameManager.instance.gameStart && GameManager.instance.playersTurn )
 		{
 			if( Input.GetKeyDown( KeyCode.W ) || Input.GetKeyDown( KeyCode.S ) || Input.GetKeyDown( KeyCode.A ) || Input.GetKeyDown( KeyCode.D ) )
 			{
@@ -30,13 +30,14 @@ public class PlayerState_Move : PlayerStateBase
 	{
 		base.Enter();
 
+		AkSoundEngine.PostEvent( Labels.PlayerFootSteps, playerController.gameObject );
 		playerController.Move();
 	}
 
 	public override void Update()
 	{
 		base.Update();
-			stateMachine.ChangeState<PlayerState_Idle>( State.Idle );
+		stateMachine.ChangeState<PlayerState_Idle>( State.Idle );
 	}
 
 	public override void Exit()

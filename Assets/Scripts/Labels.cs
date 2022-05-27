@@ -18,6 +18,12 @@ public class Labels
 
 	public const string RestartButton = "RestartButton";
 
+	public const string MainPanel = "MainPanel";
+
+	public const string StartButton = "StartButton";
+
+	public const string ExitButton = "ExitButton";
+
 	#endregion
 
 	#region Trigger
@@ -27,14 +33,6 @@ public class Labels
 	public const string Trigger_PlayerChop = "playerChop";
 
 	public const string Trigger_PlayerHit = "playerHit";
-
-	#endregion
-
-	#region ·½·¨Ãû
-
-	public const string Restart = "Restart";
-
-	public const string HideLevelImage = "HideLevelImage";
 
 	#endregion
 
@@ -49,6 +47,26 @@ public class Labels
 	public const string GameOverText_3 = " days, you starved.";
 
 	public const string Food = " Food: ";
+
+	#endregion
+
+	#region Wwise Events
+
+	public const string BGM = "BGM";
+
+	public const string EnemyAttack = "EnemyAttack";
+
+	public const string PlayerChops = "PlayerChops";
+
+	public const string PlayerHit = "PlayerHit";
+
+	public const string FruitsEvent = "Fruits";
+
+	public const string SodasEvent = "Sodas";
+
+	public const string PlayerDie = "PlayerDie";
+
+	public const string PlayerFootSteps = "PlayerFootSteps";
 
 	#endregion
 }

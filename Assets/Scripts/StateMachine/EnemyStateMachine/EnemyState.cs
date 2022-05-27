@@ -13,7 +13,7 @@ public class EnemyState_Idle : EnemyStateBase
 	public override void Update()
 	{
 		base.Update();
-		if( !GameManager.instance.playersTurn && !GameManager.instance.isSetup)
+		if( !GameManager.instance.playersTurn && !GameManager.instance.isSetup )
 		{
 			_time += Time.deltaTime;
 			if( _time > GameManager.instance.moveDelay )

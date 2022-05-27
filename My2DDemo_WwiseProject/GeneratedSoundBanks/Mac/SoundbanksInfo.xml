@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="12" SoundbankVersion="140">
+	<RootPaths>
+		<ProjectRoot>D:\My2DDemo\My2DDemo_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>D:\My2DDemo\My2DDemo_WwiseProject\.cache\Mac\</SourceFilesRoot>
+		<SoundBanksRoot>D:\My2DDemo\My2DDemo_WwiseProject\GeneratedSoundBanks\Mac\</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>D:\My2DDemo\My2DDemo_WwiseProject\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<StreamedFiles/>
+	<MediaFilesNotInAnyBank/>
+	<SoundBanks>
+		<SoundBank Id="1355168291" Language="SFX" Hash="2754342975">
+			<ObjectPath>Init</ObjectPath>
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="3161908922" Language="SFX" Hash="4018439985">
+			<ObjectPath>\SoundBanks\My2DDemo\Main</ObjectPath>
+			<ShortName>Main</ShortName>
+			<Path>Main.bnk</Path>
+			<IncludedEvents>
+				<Event Id="412724365" Name="BGM" ObjectPath="\Events\My2DDemo\GameAudios\BGM" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="395439045" Language="SFX">
+							<ShortName>Audio\BGM\scavengers_music.wav</ShortName>
+							<Path>SFX\Audio\BGM\scavengers_music_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2144693767" Name="EnemyAttack" ObjectPath="\Events\My2DDemo\GameAudios\EnemyAttack" DurationType="OneShot" DurationMin="1.213696" DurationMax="1.213696">
+					<IncludedMemoryFiles>
+						<File Id="826706311" Language="SFX">
+							<ShortName>EnemyAttack\scavengers_enemyAttack.wav</ShortName>
+							<Path>SFX\EnemyAttack\scavengers_enemyAttack_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2475207892" Name="Fruits" ObjectPath="\Events\My2DDemo\GameAudios\Fruits" DurationType="OneShot" DurationMin="0.518367" DurationMax="0.653492">
+					<IncludedMemoryFiles>
+						<File Id="13280696" Language="SFX">
+							<ShortName>Audio\Fruits\scavengers_fruit1.wav</ShortName>
+							<Path>SFX\Audio\Fruits\scavengers_fruit1_10C4C929.wem</Path>
+						</File>
+						<File Id="394974811" Language="SFX">
+							<ShortName>Audio\Fruits\scavengers_fruit2.wav</ShortName>
+							<Path>SFX\Audio\Fruits\scavengers_fruit2_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3552484513" Name="PlayerChops" ObjectPath="\Events\My2DDemo\GameAudios\PlayerChops" DurationType="OneShot" DurationMin="1.105737" DurationMax="1.168209">
+					<IncludedMemoryFiles>
+						<File Id="136208982" Language="SFX">
+							<ShortName>Audio\PlayerChops\scavengers_chop1.wav</ShortName>
+							<Path>SFX\Audio\PlayerChops\scavengers_chop1_10C4C929.wem</Path>
+						</File>
+						<File Id="1057108690" Language="SFX">
+							<ShortName>Audio\PlayerChops\scavengers_chop2.wav</ShortName>
+							<Path>SFX\Audio\PlayerChops\scavengers_chop2_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3966601280" Name="PlayerDie" ObjectPath="\Events\My2DDemo\GameAudios\PlayerDie" DurationType="OneShot" DurationMin="2.175011" DurationMax="2.175011">
+					<IncludedMemoryFiles>
+						<File Id="217411854" Language="SFX">
+							<ShortName>Audio\Others\scavengers_die.wav</ShortName>
+							<Path>SFX\Audio\Others\scavengers_die_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1681012287" Name="PlayerFootSteps" ObjectPath="\Events\My2DDemo\GameAudios\PlayerFootSteps" DurationType="OneShot" DurationMin="0.884989" DurationMax="1.047596">
+					<IncludedMemoryFiles>
+						<File Id="404963750" Language="SFX">
+							<ShortName>Audio\PlayerFootStesps\scavengers_footstep1.wav</ShortName>
+							<Path>SFX\Audio\PlayerFootStesps\scavengers_footstep1_10C4C929.wem</Path>
+						</File>
+						<File Id="1042520969" Language="SFX">
+							<ShortName>Audio\PlayerFootStesps\scavengers_footstep2.wav</ShortName>
+							<Path>SFX\Audio\PlayerFootStesps\scavengers_footstep2_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3831688773" Name="PlayerHit" ObjectPath="\Events\My2DDemo\GameAudios\PlayerHit" DurationType="OneShot" DurationMin="1.937778" DurationMax="1.937778">
+					<IncludedMemoryFiles>
+						<File Id="673815778" Language="SFX">
+							<ShortName>PlayerHit\scavengers_playerHit.wav</ShortName>
+							<Path>SFX\PlayerHit\scavengers_playerHit_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="877560665" Name="Sodas" ObjectPath="\Events\My2DDemo\GameAudios\Sodas" DurationType="OneShot" DurationMin="0.83229" DurationMax="0.980748">
+					<IncludedMemoryFiles>
+						<File Id="1391119" Language="SFX">
+							<ShortName>Audio\Sodas\scavengers_soda1.wav</ShortName>
+							<Path>SFX\Audio\Sodas\scavengers_soda1_10C4C929.wem</Path>
+						</File>
+						<File Id="463526606" Language="SFX">
+							<ShortName>Audio\Sodas\scavengers_soda2.wav</ShortName>
+							<Path>SFX\Audio\Sodas\scavengers_soda2_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+			</IncludedEvents>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>

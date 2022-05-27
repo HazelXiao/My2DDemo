@@ -1,0 +1,24 @@
+Event	ID	Name			Wwise Object Path	Notes
+	412724365	BGM			\My2DDemo\GameAudios\BGM	
+	877560665	Sodas			\My2DDemo\GameAudios\Sodas	
+	1681012287	PlayerFootSteps			\My2DDemo\GameAudios\PlayerFootSteps	
+	2144693767	EnemyAttack			\My2DDemo\GameAudios\EnemyAttack	
+	2475207892	Fruits			\My2DDemo\GameAudios\Fruits	
+	3552484513	PlayerChops			\My2DDemo\GameAudios\PlayerChops	
+	3831688773	PlayerHit			\My2DDemo\GameAudios\PlayerHit	
+	3966601280	PlayerDie			\My2DDemo\GameAudios\PlayerDie	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	1391119	scavengers_soda1	D:\My2DDemo\My2DDemo_WwiseProject\.cache\Mac\SFX\Audio\Sodas\scavengers_soda1_10C4C929.wem		\Actor-Mixer Hierarchy\My2DDemo\Audio\Sodas\scavengers_soda1		146880
+	13280696	scavengers_fruit1	D:\My2DDemo\My2DDemo_WwiseProject\.cache\Mac\SFX\Audio\Fruits\scavengers_fruit1_10C4C929.wem		\Actor-Mixer Hierarchy\My2DDemo\Audio\Fruits\scavengers_fruit1		45784
+	136208982	scavengers_chop1	D:\My2DDemo\My2DDemo_WwiseProject\.cache\Mac\SFX\Audio\PlayerChops\scavengers_chop1_10C4C929.wem		\Actor-Mixer Hierarchy\My2DDemo\Audio\PlayerChops\scavengers_chop1		206136
+	217411854	PlayerDie	D:\My2DDemo\My2DDemo_WwiseProject\.cache\Mac\SFX\Audio\Others\scavengers_die_10C4C929.wem		\Actor-Mixer Hierarchy\My2DDemo\Audio\PlayerDie		191900
+	394974811	scavengers_fruit2	D:\My2DDemo\My2DDemo_WwiseProject\.cache\Mac\SFX\Audio\Fruits\scavengers_fruit2_10C4C929.wem		\Actor-Mixer Hierarchy\My2DDemo\Audio\Fruits\scavengers_fruit2		57702
+	395439045	BGM	D:\My2DDemo\My2DDemo_WwiseProject\.cache\Mac\SFX\Audio\BGM\scavengers_music_D79FB2B7.wem		\Actor-Mixer Hierarchy\My2DDemo\Audio\BGM		13547584
+	404963750	scavengers_footstep1	D:\My2DDemo\My2DDemo_WwiseProject\.cache\Mac\SFX\Audio\PlayerFootStesps\scavengers_footstep1_10C4C929.wem		\Actor-Mixer Hierarchy\My2DDemo\Audio\PlayerFootSteps\scavengers_footstep1		78120
+	463526606	scavengers_soda2	D:\My2DDemo\My2DDemo_WwiseProject\.cache\Mac\SFX\Audio\Sodas\scavengers_soda2_10C4C929.wem		\Actor-Mixer Hierarchy\My2DDemo\Audio\Sodas\scavengers_soda2		173068
+	673815778	PlayerHit	D:\My2DDemo\My2DDemo_WwiseProject\.cache\Mac\SFX\PlayerHit\scavengers_playerHit_10C4C929.wem		\Actor-Mixer Hierarchy\My2DDemo\Audio\PlayerHit		170976
+	826706311	EnemyAttack	D:\My2DDemo\My2DDemo_WwiseProject\.cache\Mac\SFX\EnemyAttack\scavengers_enemyAttack_10C4C929.wem		\Actor-Mixer Hierarchy\My2DDemo\Audio\EnemyAttack		107112
+	1042520969	scavengers_footstep2	D:\My2DDemo\My2DDemo_WwiseProject\.cache\Mac\SFX\Audio\PlayerFootStesps\scavengers_footstep2_10C4C929.wem		\Actor-Mixer Hierarchy\My2DDemo\Audio\PlayerFootSteps\scavengers_footstep2		92462
+	1057108690	scavengers_chop2	D:\My2DDemo\My2DDemo_WwiseProject\.cache\Mac\SFX\Audio\PlayerChops\scavengers_chop2_10C4C929.wem		\Actor-Mixer Hierarchy\My2DDemo\Audio\PlayerChops\scavengers_chop2		195116
+

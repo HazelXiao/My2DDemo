@@ -143,7 +143,7 @@ public class BoardManager : MonoBehaviour
 		InstantiateObjectAtRandom( innerWallTiles, wallCountRange.minimum, wallCountRange.maximun );
 		InstantiateObjectAtRandom( foodTiles, foodCountRange.minimum, foodCountRange.maximun );
 
-		int enemyCount = level ;
+		int enemyCount = level;
 		InstantiateObjectAtRandom( enemyTiles, enemyCount, enemyCount );
 
 		Vector3 exitPosition = new Vector3( columns - 1, rows - 1, 0f );

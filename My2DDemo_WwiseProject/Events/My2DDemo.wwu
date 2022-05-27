@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{6442A5F7-01C8-4332-A1E7-841EF19D553C}" SchemaVersion="103">
+	<Events>
+		<WorkUnit Name="My2DDemo" ID="{6442A5F7-01C8-4332-A1E7-841EF19D553C}" PersistMode="Standalone">
+			<ChildrenList>
+				<Folder Name="GameAudios" ID="{D758346C-3625-45CF-A94E-C9F9385BFC66}" ShortID="1072446816">
+					<ChildrenList>
+						<Event Name="PlayerFootSteps" ID="{4A3B0E75-B8C3-4AB9-BDF9-587380FC8D85}">
+							<ChildrenList>
+								<Action Name="" ID="{763A59AF-6B26-4027-BD58-5A9FB25C1CC3}" ShortID="874554156">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="PlayerFootSteps" ID="{5F391255-B4BF-4598-B5A4-E88F857A4612}" WorkUnitID="{6C84D6A3-8E66-46BC-82D0-0E517B35B006}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="PlayerChops" ID="{B77E6E20-9BFD-4311-991F-664B2D2FC804}">
+							<ChildrenList>
+								<Action Name="" ID="{DD583C31-36D4-4E9A-8F7E-6426F30ED4C0}" ShortID="316157692">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="PlayerChops" ID="{C6990FDA-94B0-4F98-B05A-B5A1787DEB1D}" WorkUnitID="{6C84D6A3-8E66-46BC-82D0-0E517B35B006}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Fruits" ID="{44FBDE3C-B18A-4483-9859-6098C8CD74F9}">
+							<ChildrenList>
+								<Action Name="" ID="{F53971F0-FF7E-445C-B146-0FBA88407EE6}" ShortID="761224947">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Fruits" ID="{8F301C33-35A0-43C1-9A65-66FBB64D6C96}" WorkUnitID="{6C84D6A3-8E66-46BC-82D0-0E517B35B006}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Sodas" ID="{5A29AF1F-0B2C-4FB9-B900-247CC0C97031}">
+							<ChildrenList>
+								<Action Name="" ID="{8DD69906-3256-4B04-B25D-4930F58E0F3F}" ShortID="411467458">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Sodas" ID="{F2E6B6F6-9259-417E-AD58-5FD6114F8448}" WorkUnitID="{6C84D6A3-8E66-46BC-82D0-0E517B35B006}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="PlayerDie" ID="{AC989CFD-C846-41C1-9DF6-BC94B41483F7}">
+							<ChildrenList>
+								<Action Name="" ID="{953AB52E-008A-44CB-A781-CFAB083BB556}" ShortID="264134812">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="PlayerDie" ID="{2D81A923-2A8B-4054-9016-527E5CC1E3C6}" WorkUnitID="{6C84D6A3-8E66-46BC-82D0-0E517B35B006}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="BGM" ID="{2E19D8CC-4BD6-47F3-9AAD-CD952DE34D62}">
+							<ChildrenList>
+								<Action Name="" ID="{9CBD0EB0-1B47-4C6A-BABF-B8C8E4F1001F}" ShortID="702013751">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="BGM" ID="{FA4B0897-0004-49AE-B4B3-A75A191C540C}" WorkUnitID="{6C84D6A3-8E66-46BC-82D0-0E517B35B006}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="EnemyAttack" ID="{5031C2A3-996B-448E-AA49-3275438F56E8}">
+							<ChildrenList>
+								<Action Name="" ID="{E3F0E27A-E976-4923-8D93-8E6BCBE3B958}" ShortID="829156004">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="EnemyAttack" ID="{F58D0253-60C5-4F9A-9DCB-9D1234E2F17D}" WorkUnitID="{6C84D6A3-8E66-46BC-82D0-0E517B35B006}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="PlayerHit" ID="{123E25A3-0FED-49A0-BFE3-5EF8BF27FA35}">
+							<ChildrenList>
+								<Action Name="" ID="{B8AE4AD5-F982-4A77-BFED-CCB84CD6E943}" ShortID="765570542">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="PlayerHit" ID="{4ED39321-8DBE-493D-B9BF-BDF1534DFE58}" WorkUnitID="{6C84D6A3-8E66-46BC-82D0-0E517B35B006}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

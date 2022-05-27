@@ -6,37 +6,37 @@ using Random = UnityEngine.Random;
 
 public static class Extensions
 {
-    public static T RemoveRandomElement<T>( this IList<T> list )
-    {
-        if( list == null )
-        {
-            throw new ArgumentException( "list" );
-        }
+	public static T RemoveRandomElement<T>( this IList<T> list )
+	{
+		if( list == null )
+		{
+			throw new ArgumentException( "list" );
+		}
 
-        if( list.Count == 0 )
-        {
-            throw new ArgumentOutOfRangeException( "list" );
-        }
+		if( list.Count == 0 )
+		{
+			throw new ArgumentOutOfRangeException( "list" );
+		}
 
-        int randomIndex = Random.Range( 0, list.Count );
-        T element = list[randomIndex];
-        list.RemoveAt( randomIndex );
-        return element;
-    }
+		int randomIndex = Random.Range( 0, list.Count );
+		T element = list[randomIndex];
+		list.RemoveAt( randomIndex );
+		return element;
+	}
 
-    public static T RandomElement<T>( this IList<T> list )
-    {
-        if( list == null )
-        {
-            throw new ArgumentException( "list" );
-        }
+	public static T RandomElement<T>( this IList<T> list )
+	{
+		if( list == null )
+		{
+			throw new ArgumentException( "list" );
+		}
 
-        if( list.Count == 0 )
-        {
-            throw new ArgumentOutOfRangeException( "list" );
-        }
+		if( list.Count == 0 )
+		{
+			throw new ArgumentOutOfRangeException( "list" );
+		}
 
-        int randomIndex = Random.Range( 0, list.Count );
-        return list[randomIndex];
-    }
+		int randomIndex = Random.Range( 0, list.Count );
+		return list[randomIndex];
+	}
 }

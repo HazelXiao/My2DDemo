@@ -53,11 +53,13 @@ public class PlayerController : CharacterMove
 		hitWall.DamageWall( wallDamage );
 
 		_animator.SetTrigger( Labels.Trigger_PlayerChop );
+		AkSoundEngine.PostEvent( Labels.PlayerChops, this.gameObject );
 	}
 
 	public void LoseFood( int losePoint )
 	{
 		_animator.SetTrigger( Labels.Trigger_PlayerHit );
+		AkSoundEngine.PostEvent( Labels.PlayerHit, this.gameObject );
 		if( losePoint < _points )
 		{
 			_points -= losePoint;
@@ -80,19 +82,21 @@ public class PlayerController : CharacterMove
 
 		if( currentType == TriggerObjectType.Exit )
 		{
-			Invoke( Labels.Restart, restartLevelDelay );
+			GameManager.instance.isExit = true;
 			enabled = false;
 		}
 		else if( currentType == TriggerObjectType.Food )
 		{
 			_points += foodPoints;
 			foodText.text = "+" + foodPoints + Labels.Food + _points;
+			AkSoundEngine.PostEvent( Labels.FruitsEvent, this.gameObject );
 			go.SetActive( false );
 		}
 		else if( currentType == TriggerObjectType.Soda )
 		{
 			_points += sodaPoints;
 			foodText.text = "+" + sodaPoints + Labels.Food + _points;
+			AkSoundEngine.PostEvent( Labels.SodasEvent, this.gameObject );
 			go.SetActive( false );
 		}
 	}
@@ -140,11 +144,8 @@ public class PlayerController : CharacterMove
 		if( _points <= 0 )
 		{
 			GameManager.instance.GameOver();
-		}
-	}
 
-	public void Restart()
-	{
-		SceneManager.LoadScene( Labels.MainScene );
+			AkSoundEngine.PostEvent( Labels.PlayerDie, this.gameObject );
+		}
 	}
 }

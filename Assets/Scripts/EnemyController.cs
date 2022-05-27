@@ -69,6 +69,8 @@ public class EnemyController : CharacterMove
 
 		_animator.SetTrigger( Labels.Trigger_EnemyAttack );
 
+		AkSoundEngine.PostEvent( Labels.EnemyAttack, this.gameObject );
+
 		player.LoseFood( playerDamage );
 	}
 }

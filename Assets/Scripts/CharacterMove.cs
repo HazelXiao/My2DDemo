@@ -28,7 +28,7 @@ public abstract class CharacterMove : MonoBehaviour
 		_rigidbody2D = GetComponent<Rigidbody2D>();
 
 		var position = _rigidbody2D.position;
-		currentGrid = new Vector2Int( ( int )position.x, ( int )position.y );
+		currentGrid = new Vector2Int( (int)position.x, (int)position.y );
 	}
 
 	/// <summary>
@@ -39,7 +39,7 @@ public abstract class CharacterMove : MonoBehaviour
 	protected IEnumerator OnMove( Vector3 endPositon )
 	{
 		Vector3 newPosition = Vector3.MoveTowards( _rigidbody2D.position, endPositon, moveSpeed );
-		currentGrid = new Vector2Int( ( int )newPosition.x, ( int )newPosition.y );
+		currentGrid = new Vector2Int( (int)newPosition.x, (int)newPosition.y );
 
 		_rigidbody2D.MovePosition( newPosition );
 

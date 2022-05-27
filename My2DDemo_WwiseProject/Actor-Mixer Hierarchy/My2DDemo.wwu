@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{6C84D6A3-8E66-46BC-82D0-0E517B35B006}" SchemaVersion="103">
+	<AudioObjects>
+		<WorkUnit Name="My2DDemo" ID="{6C84D6A3-8E66-46BC-82D0-0E517B35B006}" PersistMode="Standalone">
+			<ChildrenList>
+				<Folder Name="Audio" ID="{063C1F16-2447-4039-8BC0-6F7FE23B914F}" ShortID="918361859">
+					<ChildrenList>
+						<Sound Name="BGM" ID="{FA4B0897-0004-49AE-B4B3-A75A191C540C}" ShortID="767668713">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{811174BA-FB81-4902-B1B2-BE1CEE288E29}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF952BE-1464-4092-8F68-7D12A5939DDD}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="scavengers_music" ID="{B1167E49-820D-4911-9B20-70E7907C7935}">
+									<Language>SFX</Language>
+									<AudioFile>Audio\BGM\scavengers_music.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="395439045"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="scavengers_music" ID="{B1167E49-820D-4911-9B20-70E7907C7935}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<RandomSequenceContainer Name="Fruits" ID="{8F301C33-35A0-43C1-9A65-66FBB64D6C96}" ShortID="788869478">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{811174BA-FB81-4902-B1B2-BE1CEE288E29}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF952BE-1464-4092-8F68-7D12A5939DDD}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="scavengers_fruit1" ID="{297EE06A-96BA-4128-B005-E92CA3E240E1}" ShortID="996537253">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{811174BA-FB81-4902-B1B2-BE1CEE288E29}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF952BE-1464-4092-8F68-7D12A5939DDD}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="scavengers_fruit1" ID="{EF39A337-1FFF-4869-97D8-D16C5D57BD0C}">
+											<Language>SFX</Language>
+											<AudioFile>Audio\Fruits\scavengers_fruit1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="13280696"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="scavengers_fruit1" ID="{EF39A337-1FFF-4869-97D8-D16C5D57BD0C}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="scavengers_fruit2" ID="{3A34488B-398C-4DCA-B1FD-CC9BDE81B180}" ShortID="306459680">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{811174BA-FB81-4902-B1B2-BE1CEE288E29}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF952BE-1464-4092-8F68-7D12A5939DDD}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="scavengers_fruit2" ID="{514CC07A-F3DC-4072-8B40-17A51C304730}">
+											<Language>SFX</Language>
+											<AudioFile>Audio\Fruits\scavengers_fruit2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="394974811"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="scavengers_fruit2" ID="{514CC07A-F3DC-4072-8B40-17A51C304730}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+							<ObjectLists/>
+						</RandomSequenceContainer>
+						<Sound Name="PlayerDie" ID="{2D81A923-2A8B-4054-9016-527E5CC1E3C6}" ShortID="333916877">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{811174BA-FB81-4902-B1B2-BE1CEE288E29}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF952BE-1464-4092-8F68-7D12A5939DDD}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="scavengers_die" ID="{FB8F0256-91EA-4FE0-9A5B-13048A2C4833}">
+									<Language>SFX</Language>
+									<AudioFile>Audio\Others\scavengers_die.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="217411854"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="scavengers_die" ID="{FB8F0256-91EA-4FE0-9A5B-13048A2C4833}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<RandomSequenceContainer Name="PlayerChops" ID="{C6990FDA-94B0-4F98-B05A-B5A1787DEB1D}" ShortID="462741342">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{811174BA-FB81-4902-B1B2-BE1CEE288E29}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF952BE-1464-4092-8F68-7D12A5939DDD}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="scavengers_chop1" ID="{38CD36AC-834E-49E8-9003-BCF12AA78719}" ShortID="645253556">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{811174BA-FB81-4902-B1B2-BE1CEE288E29}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF952BE-1464-4092-8F68-7D12A5939DDD}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="scavengers_chop1" ID="{4DE9B920-ACFA-4AEE-875B-614E1F56C63E}">
+											<Language>SFX</Language>
+											<AudioFile>Audio\PlayerChops\scavengers_chop1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="136208982"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="scavengers_chop1" ID="{4DE9B920-ACFA-4AEE-875B-614E1F56C63E}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="scavengers_chop2" ID="{6FF81EF1-4050-4719-85BD-7D9BE1E55573}" ShortID="716924209">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{811174BA-FB81-4902-B1B2-BE1CEE288E29}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF952BE-1464-4092-8F68-7D12A5939DDD}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="scavengers_chop2" ID="{A93C99C7-87F2-45A6-8368-9E5FBAB9846A}">
+											<Language>SFX</Language>
+											<AudioFile>Audio\PlayerChops\scavengers_chop2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1057108690"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="scavengers_chop2" ID="{A93C99C7-87F2-45A6-8368-9E5FBAB9846A}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+							<ObjectLists/>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="PlayerFootSteps" ID="{5F391255-B4BF-4598-B5A4-E88F857A4612}" ShortID="779833899">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{811174BA-FB81-4902-B1B2-BE1CEE288E29}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF952BE-1464-4092-8F68-7D12A5939DDD}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="scavengers_footstep1" ID="{825D7485-2D52-4E94-96D6-646F300D3A35}" ShortID="671564069">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{811174BA-FB81-4902-B1B2-BE1CEE288E29}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF952BE-1464-4092-8F68-7D12A5939DDD}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="scavengers_footstep1" ID="{57FACACC-A053-47F9-8C38-12AC953EC85C}">
+											<Language>SFX</Language>
+											<AudioFile>Audio\PlayerFootStesps\scavengers_footstep1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="404963750"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="scavengers_footstep1" ID="{57FACACC-A053-47F9-8C38-12AC953EC85C}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="scavengers_footstep2" ID="{E04A9EA7-7FA8-44B8-BA97-99D46AA0CD12}" ShortID="1058577056">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{811174BA-FB81-4902-B1B2-BE1CEE288E29}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF952BE-1464-4092-8F68-7D12A5939DDD}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="scavengers_footstep2" ID="{ED56B816-6479-406A-BF3C-40F94E1B1E8B}">
+											<Language>SFX</Language>
+											<AudioFile>Audio\PlayerFootStesps\scavengers_footstep2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1042520969"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="scavengers_footstep2" ID="{ED56B816-6479-406A-BF3C-40F94E1B1E8B}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+							<ObjectLists/>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="Sodas" ID="{F2E6B6F6-9259-417E-AD58-5FD6114F8448}" ShortID="262622843">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{811174BA-FB81-4902-B1B2-BE1CEE288E29}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF952BE-1464-4092-8F68-7D12A5939DDD}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="scavengers_soda1" ID="{C99768FE-7ABE-41C4-BCAB-6278A0A18633}" ShortID="313924462">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{811174BA-FB81-4902-B1B2-BE1CEE288E29}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF952BE-1464-4092-8F68-7D12A5939DDD}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="scavengers_soda1" ID="{D7C0D1B7-942E-4C15-8AD0-553C409C1BC0}">
+											<Language>SFX</Language>
+											<AudioFile>Audio\Sodas\scavengers_soda1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1391119"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="scavengers_soda1" ID="{D7C0D1B7-942E-4C15-8AD0-553C409C1BC0}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="scavengers_soda2" ID="{D44CE428-C9C6-4EC1-82AD-B455B1C6AFD3}" ShortID="770347015">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{811174BA-FB81-4902-B1B2-BE1CEE288E29}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF952BE-1464-4092-8F68-7D12A5939DDD}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="scavengers_soda2" ID="{84A3663B-F0EB-4FAA-9D69-E925903DF0A3}">
+											<Language>SFX</Language>
+											<AudioFile>Audio\Sodas\scavengers_soda2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="463526606"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="scavengers_soda2" ID="{84A3663B-F0EB-4FAA-9D69-E925903DF0A3}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+							<ObjectLists/>
+						</RandomSequenceContainer>
+						<Sound Name="EnemyAttack" ID="{F58D0253-60C5-4F9A-9DCB-9D1234E2F17D}" ShortID="240482573">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{811174BA-FB81-4902-B1B2-BE1CEE288E29}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF952BE-1464-4092-8F68-7D12A5939DDD}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="scavengers_enemyAttack" ID="{1496257B-8F56-4F59-8DAE-A17CAEDE3FE7}">
+									<Language>SFX</Language>
+									<AudioFile>EnemyAttack\scavengers_enemyAttack.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="826706311"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="scavengers_enemyAttack" ID="{1496257B-8F56-4F59-8DAE-A17CAEDE3FE7}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="PlayerHit" ID="{4ED39321-8DBE-493D-B9BF-BDF1534DFE58}" ShortID="521671129">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{811174BA-FB81-4902-B1B2-BE1CEE288E29}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF952BE-1464-4092-8F68-7D12A5939DDD}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="scavengers_playerHit" ID="{D9C77ACE-69FE-439A-8122-6F67256E245D}">
+									<Language>SFX</Language>
+									<AudioFile>PlayerHit\scavengers_playerHit.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="673815778"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="scavengers_playerHit" ID="{D9C77ACE-69FE-439A-8122-6F67256E245D}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>
